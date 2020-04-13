@@ -17,15 +17,51 @@ public class LabTwoSolver {
     private static double prevS = 0.0;
     private static double h = 0;
     private static double accuracy = 10;
+    private static int FOO_NUM = 0;
+    private static int integrateIterKind = 2;
+
 
     public static void main(String[] args) {
-        System.out.println("Введите границу a и b:");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Список методов интегрирования:");
+        System.out.println("0. Метод левых прямоугольников.");
+        System.out.println("1. Метод средних прямоугольников.");
+        System.out.println("2. Метод правых прямоугольников.");
+        System.out.println("Введите номер метода интегрирования:");
+        integrateIterKind = scanner.nextInt();
+        if(integrateIterKind > 2 || FOO_NUM < 0){
+            System.out.println("Неверный номер метода.");
+            System.exit(0);
+        }
+        System.out.println("Список функций:");
+        System.out.println("0. e^(1/x) / x^2");
+        System.out.println("1. (x^2 * sin(x)) / 10");
+        System.out.println("2. 1/sqrt(4 - x^2)");
+        System.out.println("3. 1/x");
+        System.out.println("Введите номер функции, интеграл которой вы хотите найти:");
+        FOO_NUM = scanner.nextInt();
+        if(FOO_NUM > 3 || FOO_NUM < 0){
+            System.out.println("Неверный номер команды.");
+            System.exit(0);
+        }
+        System.out.println("Введите границу a и b:");
         a = scanner.nextDouble();
         b = scanner.nextDouble();
+        trySwapBounds();
         System.out.println("Введите точность:");
         eps = scanner.nextDouble();
-        doRecanglesIntegrate(IntegrateIterKind.MIDDLE);
+        if(eps <= 0){
+            System.out.println("Неверная точность. Точность не может быть меньше либо равна нуля.");
+            System.exit(0);
+        }
+
+        switch (integrateIterKind){
+            case 0: doRecanglesIntegrate(IntegrateIterKind.LEFT); break;
+            case 1: doRecanglesIntegrate(IntegrateIterKind.MIDDLE); break;
+            case 2: doRecanglesIntegrate(IntegrateIterKind.RIGHT); break;
+        }
+
+        doRecanglesIntegrate(IntegrateIterKind.LEFT);
         System.out.println("Ответ: " + curS);
         System.out.println("Количество разбиений: " + n);
         System.out.println("Погрешность: " + accuracy);
@@ -82,15 +118,24 @@ public class LabTwoSolver {
                     break;
             }
 
-            curS += foo(x) * h;
+            curS += foo(x, FOO_NUM) * h;
             i++;
         }
         n *= 2;
     }
 
-
-    public static double foo(double x){
-        return secFoo(x);
+    public static double foo(double x, int fooNum){
+        switch(fooNum){
+            // 1 to 2
+            case 0: return Math.pow(Math.E, 1/x)/(x*x);
+            // 4 to 9
+            case 1: return (x*x*Math.sin(x)) / 10;
+            // -2 to 2
+            case 2: return 1/Math.sqrt(4 - x*x);
+            // -2 to 2;
+            case 3: return 1/x;
+            default: return 0;
+        }
     }
 
     public static boolean isIntegralCorrect(double x, int iterNum, IntegrateIterKind iterKind){
@@ -98,25 +143,25 @@ public class LabTwoSolver {
         switch (iterKind){
             case LEFT:
                 if(iterNum == 0){
-                    double f = foo(x + CHECK_BREAK_NUM);
+                    double f = foo(x + CHECK_BREAK_NUM, FOO_NUM);
                     preResult = isFinite(f) ? f : 0;
                 }
                 else{
-                    double f = (foo(x + CHECK_BREAK_NUM) + foo(x - CHECK_BREAK_NUM))/2;
+                    double f = (foo(x + CHECK_BREAK_NUM, FOO_NUM) + foo(x - CHECK_BREAK_NUM, FOO_NUM))/2;
                     preResult = isFinite(f) ? f : 0;
                 }
                 break;
             case RIGHT:
                 if(iterNum == n - 1){
-                    double f = foo(x - CHECK_BREAK_NUM);
+                    double f = foo(x - CHECK_BREAK_NUM, FOO_NUM);
                     preResult = isFinite(f) ? f : 0;
                 }else{
-                    double f = (foo(x + CHECK_BREAK_NUM) + foo(x - CHECK_BREAK_NUM))/2;
+                    double f = (foo(x + CHECK_BREAK_NUM, FOO_NUM) + foo(x - CHECK_BREAK_NUM, FOO_NUM))/2;
                     preResult = isFinite(f) ? f : 0;
                 }
                 break;
             case MIDDLE:
-                double f = (foo(x + CHECK_BREAK_NUM) + foo(x - CHECK_BREAK_NUM))/2;
+                double f = (foo(x + CHECK_BREAK_NUM, FOO_NUM) + foo(x - CHECK_BREAK_NUM, FOO_NUM))/2;
                 preResult = isFinite(f) ? f : 0;
                 break;
         }
@@ -126,19 +171,13 @@ public class LabTwoSolver {
         }
     }
 
-    public static double firstFoo(double x){
-        return Math.pow(Math.E, 1/x)/(x*x);
+    public static void trySwapBounds(){
+        if(a > b) {
+            double temp = a;
+            a = b;
+            b = temp;
+            System.out.println("Так как a > b, они были поменяны местами.");
+        }
     }
 
-    public static double secFoo(double x){
-        return (x*x*Math.sin(x)) / 10;
-    }
-
-    public static double thirdFoo(double x){
-        return 1/Math.sqrt(4 - x*x);
-    }
-
-    public static double fourthFoo(double x){
-        return Math.tan(x);
-    }
 }

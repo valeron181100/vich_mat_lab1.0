@@ -17,7 +17,6 @@ public class MySolver {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(System.in);
 
-
         if(args.length == 0){
             System.out.println("Укажите аргументы коммандной строки. Чтобы показать справку передайте ключ -i");
             System.exit(0);
