@@ -10,15 +10,13 @@ public class LabTwoSolver {
     private static double b = 1;
     private static double x = 1;
     private static double eps = 0.01;
-    private static final double CHECK_BREAK_NUM = 0.0001;
+    private static final double CHECK_BREAK_NUM = 0.00001;
 
-    /**
-     * Количество разбиений.
-     */
     private static int n = 2;
     private static double curS = 0.0;
     private static double prevS = 0.0;
     private static double h = 0;
+    private static double accuracy = 10;
 
     public static void main(String[] args) {
         System.out.println("Введите границу a и b:");
@@ -27,28 +25,37 @@ public class LabTwoSolver {
         b = scanner.nextDouble();
         System.out.println("Введите точность:");
         eps = scanner.nextDouble();
-        doRecanglesIntegrate(IntegrateIterKind.RIGHT);
+        doRecanglesIntegrate(IntegrateIterKind.MIDDLE);
         System.out.println("Ответ: " + curS);
         System.out.println("Количество разбиений: " + n);
+        System.out.println("Погрешность: " + accuracy);
     }
 
     public static void doRecanglesIntegrate(IntegrateIterKind iterKind){
         doIter(a, b, eps, iterKind);
-        while((1.0/3.0)*Math.abs(curS - prevS) > eps){
+        while(accuracy > eps){
             doIter(a, b, eps, iterKind);
+            accuracy = (1.0/3.0)*Math.abs(curS - prevS);
         }
     }
 
     public static void doIter(double a, double b, double eps, IntegrateIterKind iterKind){
+        x = a;
         prevS = curS;
         curS = 0.0;
         h = (b - a) / n;
-        int i = 1;
+        double k = 0;
+        switch (iterKind){
+            case RIGHT: k = h; break;
+            case MIDDLE: k = h/2; break;
+        }
+        int i = 0;
         while (i < n) {
 
             switch (iterKind){
                 case LEFT:
-                    x = a + i*h - h;
+                    if(i > 0) k = h;
+                    x += k;
                     if(!isIntegralCorrect(x, i, IntegrateIterKind.LEFT)){
                         System.out.println("Интеграл не может быть посчитан.");
                         System.out.println("Количество разбиений: " + n);
@@ -56,7 +63,7 @@ public class LabTwoSolver {
                     }
                     break;
                 case RIGHT:
-                    x = a + i*h;
+                    x += k;
                     if(!isIntegralCorrect(x, i, IntegrateIterKind.RIGHT)){
                         System.out.println("Интеграл не может быть посчитан.");
                         System.out.println("Количество разбиений: " + n);
@@ -64,7 +71,9 @@ public class LabTwoSolver {
                     }
                     break;
                 case MIDDLE:
-                    x = (a + i*h) - h/2;
+                    if(i > 0) k = h;
+                    x += k;
+
                     if(!isIntegralCorrect(x, i, IntegrateIterKind.MIDDLE)){
                         System.out.println("Интеграл не может быть посчитан.");
                         System.out.println("Количество разбиений: " + n);
@@ -128,6 +137,7 @@ public class LabTwoSolver {
     public static double thirdFoo(double x){
         return 1/Math.sqrt(4 - x*x);
     }
+
     public static double fourthFoo(double x){
         return Math.tan(x);
     }
