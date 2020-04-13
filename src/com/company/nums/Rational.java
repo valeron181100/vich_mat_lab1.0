@@ -98,4 +98,9 @@ public class Rational extends Number implements Comparable<Number>{
     public double doubleValue() {
         return toDouble();
     }
+
+    @Override
+    public String toString() {
+        return getNum() + "/" + getDiv();
+    }
 }
