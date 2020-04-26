@@ -37,10 +37,10 @@ public class LabTwoSolver {
         System.out.println("0. e^(1/x) / x^2");
         System.out.println("1. (x^2 * sin(x)) / 10");
         System.out.println("2. 1/sqrt(4 - x^2)");
-        System.out.println("3. 1/x");
+        System.out.println("3. arctan(1/x)");
         System.out.println("Введите номер функции, интеграл которой вы хотите найти:");
         FOO_NUM = scanner.nextInt();
-        if(FOO_NUM > 3 || FOO_NUM < 0){
+        if(FOO_NUM > 4 || FOO_NUM < 0){
             System.out.println("Неверный номер команды.");
             System.exit(0);
         }
@@ -50,24 +50,23 @@ public class LabTwoSolver {
         trySwapBounds();
         System.out.println("Введите точность:");
         eps = scanner.nextDouble();
+
         if(eps <= 0){
             System.out.println("Неверная точность. Точность не может быть меньше либо равна нуля.");
             System.exit(0);
         }
 
         switch (integrateIterKind){
-            case 0: doRecanglesIntegrate(IntegrateIterKind.LEFT); break;
-            case 1: doRecanglesIntegrate(IntegrateIterKind.MIDDLE); break;
-            case 2: doRecanglesIntegrate(IntegrateIterKind.RIGHT); break;
+            case 0: doRectanglesIntegrate(IntegrateIterKind.LEFT); break;
+            case 1: doRectanglesIntegrate(IntegrateIterKind.MIDDLE); break;
+            case 2: doRectanglesIntegrate(IntegrateIterKind.RIGHT); break;
         }
-
-        doRecanglesIntegrate(IntegrateIterKind.LEFT);
         System.out.println("Ответ: " + curS);
         System.out.println("Количество разбиений: " + n);
         System.out.println("Погрешность: " + accuracy);
     }
 
-    public static void doRecanglesIntegrate(IntegrateIterKind iterKind){
+    public static void doRectanglesIntegrate(IntegrateIterKind iterKind){
         doIter(a, b, eps, iterKind);
         while(accuracy > eps){
             doIter(a, b, eps, iterKind);
@@ -132,8 +131,9 @@ public class LabTwoSolver {
             case 1: return (x*x*Math.sin(x)) / 10;
             // -2 to 2
             case 2: return 1/Math.sqrt(4 - x*x);
-            // -2 to 2;
-            case 3: return 1/x;
+            // -2 to 4
+            case 3: return  Math.atan(1/x);
+
             default: return 0;
         }
     }
