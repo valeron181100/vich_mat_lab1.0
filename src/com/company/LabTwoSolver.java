@@ -23,16 +23,6 @@ public class LabTwoSolver {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Список методов интегрирования:");
-        System.out.println("0. Метод левых прямоугольников.");
-        System.out.println("1. Метод средних прямоугольников.");
-        System.out.println("2. Метод правых прямоугольников.");
-        System.out.println("Введите номер метода интегрирования:");
-        integrateIterKind = scanner.nextInt();
-        if(integrateIterKind > 2 || FOO_NUM < 0){
-            System.out.println("Неверный номер метода.");
-            System.exit(0);
-        }
         System.out.println("Список функций:");
         System.out.println("0. e^(1/x) / x^2");
         System.out.println("1. (x^2 * sin(x)) / 10");
@@ -55,15 +45,16 @@ public class LabTwoSolver {
             System.out.println("Неверная точность. Точность не может быть меньше либо равна нуля.");
             System.exit(0);
         }
+        System.out.println("-----------------------------------------------");
+        System.out.println("Метод левых прямоугольников:");
+        doRectanglesIntegrate(IntegrateIterKind.LEFT);
+        System.out.println("-----------------------------------------------");
+        System.out.println("Метод средних прямоугольников:");
+        doRectanglesIntegrate(IntegrateIterKind.MIDDLE);
+        System.out.println("-----------------------------------------------");
+        System.out.println("Метод правых прямоугольников:");
+        doRectanglesIntegrate(IntegrateIterKind.RIGHT);
 
-        switch (integrateIterKind){
-            case 0: doRectanglesIntegrate(IntegrateIterKind.LEFT); break;
-            case 1: doRectanglesIntegrate(IntegrateIterKind.MIDDLE); break;
-            case 2: doRectanglesIntegrate(IntegrateIterKind.RIGHT); break;
-        }
-        System.out.println("Ответ: " + curS);
-        System.out.println("Количество разбиений: " + n);
-        System.out.println("Погрешность: " + accuracy);
     }
 
     public static void doRectanglesIntegrate(IntegrateIterKind iterKind){
@@ -72,6 +63,9 @@ public class LabTwoSolver {
             doIter(a, b, eps, iterKind);
             accuracy = (1.0/3.0)*Math.abs(curS - prevS);
         }
+        System.out.println("Ответ: " + curS);
+        System.out.println("Количество разбиений: " + n);
+        System.out.println("Погрешность: " + accuracy);
     }
 
     public static void doIter(double a, double b, double eps, IntegrateIterKind iterKind){

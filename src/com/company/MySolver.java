@@ -8,6 +8,7 @@ import java.math.RoundingMode;
 import java.util.*;
 
 public class MySolver {
+    private static double[][] inputMatrix;
     private static double[][] matrix;
     private static double[] freeMemberVector;
     private static List<Double> inaccuracies = new ArrayList<>();
