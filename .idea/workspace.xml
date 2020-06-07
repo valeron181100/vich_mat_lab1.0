@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="937fc292-a720-4e1c-9188-e0838c13d6f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/MathParser_org_mXparser_4_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_math3_3_6_1_javadoc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/TestChords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/NewtonInterpolator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/graphs/GraphSolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/graphs/SolveMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vich_mat_lab1.0/com/company/LabTwoSolver$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vich_mat_lab1.0/com/company/LabTwoSolver$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vich_mat_lab1.0/com/company/LabTwoSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vich_mat_lab1.0/com/company/LabTwoSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/vich_mat_lab1.0/com/company/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/vich_mat_lab1.0/com/company/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/LabTwoSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/LabTwoSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MySolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MySolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vich_mat_lab1.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vich_mat_lab1.0.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,44 +34,85 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/nums/IntegrateIterKind.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/graphs/GraphSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="308">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/MySolver.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+            <state relative-caret-position="840">
+              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#tryDiagonallyDominant#0;class#MySolver#0" />
-                <element signature="method#transformMatrix#0;class#MySolver#0" />
-                <element signature="method#isIterationsFinish#0;class#MySolver#0" />
-                <element signature="method#readInputMatrix#0;class#MySolver#0" />
-                <element signature="method#getRandomMatrix#0;class#MySolver#0" />
-                <element signature="method#round#0;class#MySolver#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/MathParser.org-mXparser-4.4.2.jar!/org/mariuszgromada/math/mxparser/Function.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11116">
+              <caret line="415" column="38" selection-start-line="415" selection-start-column="38" selection-end-line="415" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/TestChords.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="56" column="82" lean-forward="true" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/LabTwoSolver.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/NewtonInterpolator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="51" column="61" lean-forward="true" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+            <state relative-caret-position="270">
+              <caret line="54" column="32" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#doRectanglesIntegrate#0;class#LabTwoSolver#0" />
-                <element signature="method#doIter#0;class#LabTwoSolver#0" />
-                <element signature="method#isIntegralCorrect#0;class#LabTwoSolver#0" />
-                <element signature="method#trySwapBounds#0;class#LabTwoSolver#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/libs/commons-math3-3.6.1.jar!/org/apache/commons/math3/linear/RealMatrix.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/graphs/SolveMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -97,6 +151,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>scanner.useLocale</find>
+      <find>System.exit</find>
+      <find>System.out.println(&quot;Количество разбиений: &quot; + n);</find>
+      <find>doRectanglesIntegrate</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,17 +164,22 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/company/nums/Rational.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Test.java" />
         <option value="$PROJECT_DIR$/matrix.txt" />
         <option value="$PROJECT_DIR$/src/com/company/nums/IntegrateIterKind.java" />
         <option value="$PROJECT_DIR$/src/com/company/ASolver.java" />
         <option value="$PROJECT_DIR$/src/com/company/MySolver.java" />
         <option value="$PROJECT_DIR$/src/com/company/LabTwoSolver.java" />
+        <option value="$PROJECT_DIR$/src/com/company/GraphSolver.java" />
+        <option value="$PROJECT_DIR$/src/com/company/graphs/SolveMethod.java" />
+        <option value="$PROJECT_DIR$/src/com/company/graphs/GraphSolver.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/TestChords.java" />
+        <option value="$PROJECT_DIR$/src/com/company/NewtonInterpolator.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="490" />
+    <option name="x" value="473" />
     <option name="width" value="1408" />
     <option name="height" value="1047" />
   </component>
@@ -136,6 +198,11 @@
             <path>
               <item name="vich_mat_lab1.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="vich_mat_lab1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vich_mat_lab1.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vich_mat_lab1.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -157,7 +224,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="nums" type="462c0819:PsiDirectoryNode" />
+              <item name="graphs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -168,13 +235,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/commons-math3-3.6.1-javadoc.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -189,14 +261,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LabTwoSolver">
+  <component name="RunManager" selected="Application.TestChords">
     <configuration name="ASolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ASolver" />
       <module name="vich_mat_lab1.0" />
       <option name="PROGRAM_PARAMETERS" value="-m" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.*" />
+          <option name="PATTERN" value="com.company.graphs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,20 +281,7 @@
       <module name="vich_mat_lab1.0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="vich_mat_lab1.0" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
+          <option name="PATTERN" value="com.company.graphs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -236,7 +295,7 @@
       <option name="PROGRAM_PARAMETERS" value="-r" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.*" />
+          <option name="PATTERN" value="com.company.graphs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -249,7 +308,20 @@
       <module name="vich_mat_lab1.0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.*" />
+          <option name="PATTERN" value="com.company.graphs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestChords" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.TestChords" />
+      <module name="vich_mat_lab1.0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -258,19 +330,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.MySolver" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.LabTwoSolver" />
       <item itemvalue="Application.ASolver" />
+      <item itemvalue="Application.TestChords" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestChords" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.LabTwoSolver" />
         <item itemvalue="Application.ASolver" />
         <item itemvalue="Application.MySolver" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +372,22 @@
       <workItem from="1586865891218" duration="8239000" />
       <workItem from="1587817220205" duration="3068000" />
       <workItem from="1587906831062" duration="469000" />
-      <workItem from="1587997503524" duration="332000" />
+      <workItem from="1587997503524" duration="675000" />
+      <workItem from="1588079410733" duration="5529000" />
+      <workItem from="1589033799555" duration="599000" />
+      <workItem from="1589118018163" duration="6336000" />
+      <workItem from="1590340923575" duration="4971000" />
+      <workItem from="1590377548642" duration="5602000" />
+      <workItem from="1590432006057" duration="5436000" />
+      <workItem from="1590870738659" duration="9506000" />
+      <workItem from="1590927456419" duration="4485000" />
+      <workItem from="1590944551077" duration="1107000" />
+      <workItem from="1591016095983" duration="1502000" />
+      <workItem from="1591035810529" duration="615000" />
+      <workItem from="1591098526836" duration="1676000" />
+      <workItem from="1591105915682" duration="130000" />
+      <workItem from="1591113696587" duration="958000" />
+      <workItem from="1591541659622" duration="4744000" />
     </task>
     <task id="LOCAL-00001" summary="lab 2 almost done">
       <created>1586779718235</created>
@@ -334,13 +421,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71736000" />
+    <option name="totallyTimeSpent" value="125275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49832776" visible="true" weight="0.14872068" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49832776" visible="true" weight="0.17537314" />
       <window_info id="Structure" order="1" sideWeight="0.5005574" side_tool="true" weight="0.14552239" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -349,15 +436,15 @@
       <window_info id="Favorites" order="6" sideWeight="0.50167227" side_tool="true" weight="0.14712153" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.664437" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5195095" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29988852" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40022296" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33110368" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.20624304" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32998884" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -405,16 +492,7 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="matrix[2]" />
-        <watch expression="iterCtr" />
-        <watch expression="matrix" language="JAVA" />
-        <watch expression="freeMemberVector" language="JAVA" />
         <watch expression="a" language="JAVA" />
-        <watch expression="n" language="JAVA" />
-        <watch expression="n" language="JAVA" />
-        <watch expression="n" language="JAVA" />
-        <watch expression="curS" language="JAVA" />
-        <watch expression="prevS" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
@@ -455,16 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41412">
@@ -485,10 +553,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/MathParser.org-mXparser-4.4.2.jar!/org/mariuszgromada/math/mxparser/PrimitiveElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/nums/IntegrateIterKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MySolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3136">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#tryDiagonallyDominant#0;class#MySolver#0" />
+            <element signature="method#transformMatrix#0;class#MySolver#0" />
+            <element signature="method#isIterationsFinish#0;class#MySolver#0" />
+            <element signature="method#readInputMatrix#0;class#MySolver#0" />
+            <element signature="method#getRandomMatrix#0;class#MySolver#0" />
+            <element signature="method#round#0;class#MySolver#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/LabTwoSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3976">
+          <caret line="190" column="9" selection-start-line="185" selection-start-column="8" selection-end-line="190" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doRectanglesIntegrate#0;class#LabTwoSolver#0" />
+            <element signature="method#isIntegralCorrect#0;class#LabTwoSolver#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/graphs/GraphSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="196">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/MathParser.org-mXparser-4.4.2.jar!/org/mariuszgromada/math/mxparser/Function.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11116">
+          <caret line="415" column="38" selection-start-line="415" selection-start-column="38" selection-end-line="415" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/commons-math3-3.6.1.jar!/org/apache/commons/math3/linear/RealMatrix.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/graphs/SolveMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -509,39 +660,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/nums/IntegrateIterKind.java">
+    <entry file="file://$PROJECT_DIR$/src/com/TestChords.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MySolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        <state relative-caret-position="522">
+          <caret line="56" column="82" lean-forward="true" selection-start-line="56" selection-start-column="82" selection-end-line="56" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#tryDiagonallyDominant#0;class#MySolver#0" />
-            <element signature="method#transformMatrix#0;class#MySolver#0" />
-            <element signature="method#isIterationsFinish#0;class#MySolver#0" />
-            <element signature="method#readInputMatrix#0;class#MySolver#0" />
-            <element signature="method#getRandomMatrix#0;class#MySolver#0" />
-            <element signature="method#round#0;class#MySolver#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/LabTwoSolver.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/NewtonInterpolator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="51" column="61" lean-forward="true" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
+        <state relative-caret-position="270">
+          <caret line="54" column="32" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#doRectanglesIntegrate#0;class#LabTwoSolver#0" />
-            <element signature="method#doIter#0;class#LabTwoSolver#0" />
-            <element signature="method#isIntegralCorrect#0;class#LabTwoSolver#0" />
-            <element signature="method#trySwapBounds#0;class#LabTwoSolver#0" />
           </folding>
         </state>
       </provider>
@@ -607,6 +741,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>commons-math3-3.6.1-javadoc</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -2,6 +2,8 @@ package com.company;
 
 import com.company.nums.IntegrateIterKind;
 import static java.lang.Double.isFinite;
+import static java.lang.Double.isNaN;
+
 import java.util.Scanner;
 
 public class LabTwoSolver {
@@ -19,6 +21,7 @@ public class LabTwoSolver {
     private static double accuracy = 10;
     private static int FOO_NUM = 0;
     private static int integrateIterKind = 2;
+    private static boolean isCorrect = true;
 
 
     public static void main(String[] args) {
@@ -26,49 +29,59 @@ public class LabTwoSolver {
         System.out.println("Список функций:");
         System.out.println("0. e^(1/x) / x^2");
         System.out.println("1. (x^2 * sin(x)) / 10");
-        System.out.println("2. 1/sqrt(4 - x^2)");
-        System.out.println("3. arctan(1/x)");
-        System.out.println("Введите номер функции, интеграл которой вы хотите найти:");
-        FOO_NUM = scanner.nextInt();
-        if(FOO_NUM > 4 || FOO_NUM < 0){
-            System.out.println("Неверный номер команды.");
-            System.exit(0);
-        }
-        System.out.println("Введите границу a и b:");
-        a = scanner.nextDouble();
-        b = scanner.nextDouble();
-        trySwapBounds();
-        System.out.println("Введите точность:");
-        eps = scanner.nextDouble();
+        System.out.println("2. 1/x");
+            System.out.println("3. arctan(1/x)");
+            System.out.println("Введите номер функции, интеграл которой вы хотите найти:");
+            FOO_NUM = scanner.nextInt();
+            if(FOO_NUM > 4 || FOO_NUM < 0){
+                System.out.println("Неверный номер команды.");
+                System.exit(0);
+            }
+            System.out.println("Введите границу a и b:");
+            a = scanner.nextDouble();
+            b = scanner.nextDouble();
+            trySwapBounds();
+            System.out.println("Введите точность:");
+            eps = scanner.nextDouble();
 
-        if(eps <= 0){
+            if(eps <= 0){
             System.out.println("Неверная точность. Точность не может быть меньше либо равна нуля.");
             System.exit(0);
         }
         System.out.println("-----------------------------------------------");
         System.out.println("Метод левых прямоугольников:");
         doRectanglesIntegrate(IntegrateIterKind.LEFT);
+
         System.out.println("-----------------------------------------------");
         System.out.println("Метод средних прямоугольников:");
         doRectanglesIntegrate(IntegrateIterKind.MIDDLE);
+        n = 2;
         System.out.println("-----------------------------------------------");
         System.out.println("Метод правых прямоугольников:");
         doRectanglesIntegrate(IntegrateIterKind.RIGHT);
-
+        n = 2;
     }
 
     public static void doRectanglesIntegrate(IntegrateIterKind iterKind){
-        doIter(a, b, eps, iterKind);
+        if(!doIter(a, b, eps, iterKind)){
+            return;
+        }
         while(accuracy > eps){
-            doIter(a, b, eps, iterKind);
+            if(!doIter(a, b, eps, iterKind)){
+                return;
+            }
             accuracy = (1.0/3.0)*Math.abs(curS - prevS);
         }
-        System.out.println("Ответ: " + curS);
-        System.out.println("Количество разбиений: " + n);
-        System.out.println("Погрешность: " + accuracy);
+        if(!isFinite(curS) || isNaN(curS) || !isFinite(accuracy) || isNaN(accuracy) || n == 0 || curS == 0 || accuracy == 0){
+            System.out.println("Интеграл не может быть посчитан.");
+        }else{
+            System.out.println("Ответ: " + curS);
+            System.out.println("Количество разбиений: " + n);
+            System.out.println("Погрешность: " + accuracy);
+        }
     }
 
-    public static void doIter(double a, double b, double eps, IntegrateIterKind iterKind){
+    public static boolean doIter(double a, double b, double eps, IntegrateIterKind iterKind){
         x = a;
         prevS = curS;
         curS = 0.0;
@@ -88,7 +101,8 @@ public class LabTwoSolver {
                     if(!isIntegralCorrect(x, i, IntegrateIterKind.LEFT)){
                         System.out.println("Интеграл не может быть посчитан.");
                         System.out.println("Количество разбиений: " + n);
-                        System.exit(0);
+                        return false;
+//                        System.exit(0);
                     }
                     break;
                 case RIGHT:
@@ -96,7 +110,8 @@ public class LabTwoSolver {
                     if(!isIntegralCorrect(x, i, IntegrateIterKind.RIGHT)){
                         System.out.println("Интеграл не может быть посчитан.");
                         System.out.println("Количество разбиений: " + n);
-                        System.exit(0);
+                        return false;
+//                        System.exit(0);
                     }
                     break;
                 case MIDDLE:
@@ -106,7 +121,8 @@ public class LabTwoSolver {
                     if(!isIntegralCorrect(x, i, IntegrateIterKind.MIDDLE)){
                         System.out.println("Интеграл не может быть посчитан.");
                         System.out.println("Количество разбиений: " + n);
-                        System.exit(0);
+                        return false;
+//                        System.exit(0);
                     }
                     break;
             }
@@ -115,6 +131,7 @@ public class LabTwoSolver {
             i++;
         }
         n *= 2;
+        return true;
     }
 
     public static double foo(double x, int fooNum){
@@ -124,7 +141,7 @@ public class LabTwoSolver {
             // 4 to 9
             case 1: return (x*x*Math.sin(x)) / 10;
             // -2 to 2
-            case 2: return 1/Math.sqrt(4 - x*x);
+            case 2: return 1/x;
             // -2 to 4
             case 3: return  Math.atan(1/x);
 
